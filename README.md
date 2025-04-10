@@ -20,6 +20,8 @@ Interested in learning more? Click the image below to watch our intro video.
 
 The easiest way to get started quickly with Phaser is our `create-phaser-game` app. This CLI tool presents an interactive selection of official project templates and demo games. Issue the command, answer some questions and the app will download and configure the right package for you.
 
+
+
 ```bash
 npm create @phaserjs/game@latest
 npx @phaserjs/create-game@latest
