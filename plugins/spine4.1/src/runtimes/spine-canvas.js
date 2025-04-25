@@ -4504,7 +4504,7 @@ var spine = (() => {
         image.src = path;
       }
     }
-    loadTextureAtlas(path, success = () => {
+    loadTextureAtlas(path, fileAlias, success = () => {
     }, error = () => {
     }, fileAlias) {
       let index = path.lastIndexOf("/");
