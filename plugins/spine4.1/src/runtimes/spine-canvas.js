@@ -4504,9 +4504,9 @@ var spine = (() => {
         image.src = path;
       }
     }
-    loadTextureAtlas(path, success = () => {
+    loadTextureAtlas(path, fileAlias, success = () => {
     }, error = () => {
-    }, fileAlias) {
+    }) {
       let index = path.lastIndexOf("/");
       let parent = index >= 0 ? path.substring(0, index + 1) : "";
       path = this.start(path);
@@ -6341,7 +6341,7 @@ var spine = (() => {
 
   // spine-core/src/Skin.ts
   var SkinEntry = class {
-    constructor(slotIndex = 0, name, attachment) {
+    constructor(name, attachment, slotIndex = 0) {
       this.slotIndex = slotIndex;
       this.name = name;
       this.attachment = attachment;
