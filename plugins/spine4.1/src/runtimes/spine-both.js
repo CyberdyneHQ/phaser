@@ -4090,7 +4090,7 @@ var spine;
             for (var i = 0, n = drawOrder.length; i < n; i++) {
                 var slot = drawOrder[i];
                 if (!slot.bone.active)
-                    continue;
+continue;
                 var verticesLength = 0;
                 var vertices = null;
                 var attachment = slot.getAttachment();
@@ -4140,7 +4140,7 @@ var spine;
             var input = new BinaryInput(binary);
             skeletonData.hash = input.readString();
             skeletonData.version = input.readString();
-            if ("3.8.75" == skeletonData.version)
+            if (skeletonData.version == "3.8.75")
                 throw new Error("Unsupported skeleton data, please export with a newer version of Spine.");
             skeletonData.x = input.readFloat();
             skeletonData.y = input.readFloat();
@@ -5502,7 +5502,7 @@ var spine;
             return null;
         };
         SkeletonData.prototype.findTransformConstraint = function (constraintName) {
-            if (constraintName == null)
+if (constraintName == null)
                 throw new Error("constraintName cannot be null.");
             var transformConstraints = this.transformConstraints;
             for (var i = 0, n = transformConstraints.length; i < n; i++) {
@@ -5552,7 +5552,7 @@ var spine;
             if (skeletonMap != null) {
                 skeletonData.hash = skeletonMap.hash;
                 skeletonData.version = skeletonMap.spine;
-                if ("3.8.75" == skeletonData.version)
+                if (skeletonData.version == "3.8.75")
                     throw new Error("Unsupported skeleton data, please export with a newer version of Spine.");
                 skeletonData.x = skeletonMap.x;
                 skeletonData.y = skeletonMap.y;
