@@ -210,7 +210,7 @@ export class Parser {
             if (!obj)
             {
                 console.log(`${doclet.longname} - Kind: ${doclet.kind}`);
-                console.log(`Warning: Didn't find object`);
+                console.log("Warning: Didn't find object");
 
                 continue;
             }
