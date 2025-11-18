@@ -11,7 +11,6 @@
  */
 
 var CONST = {
-
     /**
      * Phaser Release Version
      *
@@ -20,7 +19,7 @@ var CONST = {
      * @type {string}
      * @since 3.0.0
      */
-            VERSION: '3.87',
+    VERSION: "3.87",
 
     /**
      * Phaser Release Version as displayed in the console.log header URL.
@@ -30,11 +29,11 @@ var CONST = {
      * @type {string}
      * @since 3.87.0
      */
-    LOG_VERSION: 'v387',
+    LOG_VERSION: "v387",
 
-    BlendModes: require('./renderer/BlendModes'),
+    BlendModes: require("./renderer/BlendModes"),
 
-    ScaleModes: require('./renderer/ScaleModes'),
+    ScaleModes: require("./renderer/ScaleModes"),
 
     /**
      * This setting will auto-detect if the browser is capable of suppporting WebGL.
@@ -141,8 +140,7 @@ var CONST = {
      * @type {number}
      * @since 3.0.0
      */
-    RIGHT: 8
-
+    RIGHT: 8,
 };
 
 module.exports = CONST;
