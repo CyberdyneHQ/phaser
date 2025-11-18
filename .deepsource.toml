@@ -6,5 +6,5 @@ name = "javascript"
 [[analyzers]]
 name = "secrets"
 
-[[transformers]]
+[[code_formatters]]
 name = "prettier"
