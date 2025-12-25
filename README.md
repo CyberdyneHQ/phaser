@@ -30,15 +30,15 @@ bun create @phaserjs/game@latest
 
 We support all of the following frameworks and bundlers:
 
-| Frameworks | Bundlers |
-| --------- | ------- |
-| Vue.js | Vite |
-| React | Rollup |
-| Angular | Parcel |
-| Next.js | Webpack |
-| SolidJS | ESBuild |
-| Svelte | Import Map |
-| Remix | Bun |
+| Frameworks | Bundlers   |
+| ---------- | ---------- |
+| Vue.js     | Vite       |
+| React      | Rollup     |
+| Angular    | Parcel     |
+| Next.js    | Webpack    |
+| SolidJS    | ESBuild    |
+| Svelte     | Import Map |
+| Remix      | Bun        |
 
 Most come in both JavaScript and TypeScript versions.
 
@@ -90,13 +90,11 @@ We maintain documentation for the 10 most recent versions on this site.
 
 We recommend the following to begin your journey:
 
-* [Getting Started with Phaser 3](https://phaser.io/tutorials/getting-started-phaser3) (useful if you are completely new to Phaser)
-* [Making your first Phaser 3 Game](https://phaser.io/tutorials/making-your-first-phaser-3-game)
-* Plus, there are [over 700 Phaser tutorials](https://phaser.io/learn) listed on our website.
+- [Getting Started with Phaser 3](https://phaser.io/tutorials/getting-started-phaser3) (useful if you are completely new to Phaser)
+- [Making your first Phaser 3 Game](https://phaser.io/tutorials/making-your-first-phaser-3-game)
+- Plus, there are [over 700 Phaser tutorials](https://phaser.io/learn) listed on our website.
 
 New tutorials are being published every week, so check our site for more.
-
-
 
 ## Phaser by Example Book
 
@@ -114,7 +112,7 @@ Register for a free Phaser account to [download the book](https://phaser.io/news
 
 ## Source Code Examples
 
-We have created hundreds of examples and they are all available with full source code and assets. 
+We have created hundreds of examples and they are all available with full source code and assets.
 
 Browse our brand new [Phaser Examples site](https://phaser.io/examples).
 
@@ -138,8 +136,8 @@ Read more about [Phaser Compressor](https://phaser.io/news/2024/05/phaser-compre
 
 We meticulously keep track of new features, updates and bug fixes in our change logs. Each version of Phaser has its own change log:
 
-* [v3.87 Change Log](changelog/3.87/CHANGELOG-v3.87.md)
-* [v3.0.0 to v3.86 Change Logs](CHANGELOG.md)
+- [v3.87 Change Log](changelog/3.87/CHANGELOG-v3.87.md)
+- [v3.0.0 to v3.86 Change Logs](CHANGELOG.md)
 
 ## Have fun!
 
