@@ -4090,7 +4090,7 @@ var spine;
             for (var i = 0, n = drawOrder.length; i < n; i++) {
                 var slot = drawOrder[i];
                 if (!slot.bone.active)
-                    continue;
+continue;
                 var verticesLength = 0;
                 var vertices = null;
                 var attachment = slot.getAttachment();
@@ -4140,7 +4140,7 @@ var spine;
             var input = new BinaryInput(binary);
             skeletonData.hash = input.readString();
             skeletonData.version = input.readString();
-            if ("3.8.75" == skeletonData.version)
+            if (skeletonData.version == "3.8.75")
                 throw new Error("Unsupported skeleton data, please export with a newer version of Spine.");
             skeletonData.x = input.readFloat();
             skeletonData.y = input.readFloat();
@@ -5502,7 +5502,7 @@ var spine;
             return null;
         };
         SkeletonData.prototype.findTransformConstraint = function (constraintName) {
-            if (constraintName == null)
+if (constraintName == null)
                 throw new Error("constraintName cannot be null.");
             var transformConstraints = this.transformConstraints;
             for (var i = 0, n = transformConstraints.length; i < n; i++) {
@@ -5528,81 +5528,7 @@ var spine;
                 throw new Error("pathConstraintName cannot be null.");
             var pathConstraints = this.pathConstraints;
             for (var i = 0, n = pathConstraints.length; i < n; i++)
-                if (pathConstraints[i].name == pathConstraintName)
-                    return i;
-            return -1;
-        };
-        return SkeletonData;
-    }());
-    spine.SkeletonData = SkeletonData;
-})(spine || (spine = {}));
-var spine;
-(function (spine) {
-    var SkeletonJson = (function () {
-        function SkeletonJson(attachmentLoader) {
-            this.scale = 1;
-            this.linkedMeshes = new Array();
-            this.attachmentLoader = attachmentLoader;
-        }
-        SkeletonJson.prototype.readSkeletonData = function (json) {
-            var scale = this.scale;
-            var skeletonData = new spine.SkeletonData();
-            var root = typeof (json) === "string" ? JSON.parse(json) : json;
-            var skeletonMap = root.skeleton;
-            if (skeletonMap != null) {
-                skeletonData.hash = skeletonMap.hash;
-                skeletonData.version = skeletonMap.spine;
-                if ("3.8.75" == skeletonData.version)
-                    throw new Error("Unsupported skeleton data, please export with a newer version of Spine.");
-                skeletonData.x = skeletonMap.x;
-                skeletonData.y = skeletonMap.y;
-                skeletonData.width = skeletonMap.width;
-                skeletonData.height = skeletonMap.height;
-                skeletonData.fps = skeletonMap.fps;
-                skeletonData.imagesPath = skeletonMap.images;
-            }
-            if (root.bones) {
-                for (var i = 0; i < root.bones.length; i++) {
-                    var boneMap = root.bones[i];
-                    var parent_5 = null;
-                    var parentName = this.getValue(boneMap, "parent", null);
-                    if (parentName != null) {
-                        parent_5 = skeletonData.findBone(parentName);
-                        if (parent_5 == null)
-                            throw new Error("Parent bone not found: " + parentName);
-                    }
-                    var data = new spine.BoneData(skeletonData.bones.length, boneMap.name, parent_5);
-                    data.length = this.getValue(boneMap, "length", 0) * scale;
-                    data.x = this.getValue(boneMap, "x", 0) * scale;
-                    data.y = this.getValue(boneMap, "y", 0) * scale;
-                    data.rotation = this.getValue(boneMap, "rotation", 0);
-                    data.scaleX = this.getValue(boneMap, "scaleX", 1);
-                    data.scaleY = this.getValue(boneMap, "scaleY", 1);
-                    data.shearX = this.getValue(boneMap, "shearX", 0);
-                    data.shearY = this.getValue(boneMap, "shearY", 0);
-                    data.transformMode = SkeletonJson.transformModeFromString(this.getValue(boneMap, "transform", "normal"));
-                    data.skinRequired = this.getValue(boneMap, "skin", false);
-                    skeletonData.bones.push(data);
-                }
-            }
-            if (root.slots) {
-                for (var i = 0; i < root.slots.length; i++) {
-                    var slotMap = root.slots[i];
-                    var slotName = slotMap.name;
-                    var boneName = slotMap.bone;
-                    var boneData = skeletonData.findBone(boneName);
-                    if (boneData == null)
-                        throw new Error("Slot bone not found: " + boneName);
-                    var data = new spine.SlotData(skeletonData.slots.length, slotName, boneData);
-                    var color = this.getValue(slotMap, "color", null);
-                    if (color != null)
-                        data.color.setFromString(color);
-                    var dark = this.getValue(slotMap, "dark", null);
-                    if (dark != null) {
-                        data.darkColor = new spine.Color(1, 1, 1, 1);
-                        data.darkColor.setFromString(dark);
-                    }
-                    data.attachmentName = this.getValue(slotMap, "attachment", null);
+                if (pathConstraints[i].name ==
                     data.blendMode = SkeletonJson.blendModeFromString(this.getValue(slotMap, "blend", "normal"));
                     skeletonData.slots.push(data);
                 }
