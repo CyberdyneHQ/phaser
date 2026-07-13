@@ -5,6 +5,7 @@
  */
 
 var AddToDOM = require('../dom/AddToDOM');
+debugger;
 
 var CreateDOMContainer = function (game)
 {
